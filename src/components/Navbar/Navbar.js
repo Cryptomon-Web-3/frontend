@@ -13,7 +13,7 @@ import {
 
 const Navigation = [
     {
-        label: 'Home',
+        label: 'Dashboard',
         icon: HomeIcon,
         to: '/'
     },
@@ -108,23 +108,38 @@ const Navbar = ({children}) => {
             {/* Content area */}
             <div className="flex-1 flex flex-col overflow-hidden">
                 <header className="w-full">
-                    <div className="relative z-10 flex-shrink-0 h-16 bg-light flex">
+                    <div className="relative z-10 flex-shrink-0 items-center h-20 bg-primary flex">
                         {/* Hamburger  */}
-                        <button type="button" className="border-r border-gray-200 px-4 text-gray-500  md:hidden">
+                        <button type="button" className="border-r px-4 border-gray-200 text-gray-500  md:hidden">
                             <span className="sr-only">Open sidebar</span>
                             <MenuAlt2Icon className="h-6 w-6" onClick={() => setHamMenuOn(true)}/>
                         </button>
                         {/* Navbar items  */}
+                        <div className='px-4 '>
+                            {
+                                Navigation.map((nav) => {
+                                    if(location.pathname === nav.to){
+                                        return(
+                                            <div className='text-white sm:text-4xl text-2xl flex items-center space-x-4'>
+                                                <nav.icon className='sm:h-10 sm:w-10'/>
+                                                <h1 className='font-bold'>{nav.label}</h1>
+                                            </div>
+                                        )
+                                    }
+                                })
+
+                            }
+                        </div>
                         <div className="flex-1 flex justify-end px-4 sm:px-6">
                             <div className="ml-2 flex items-center space-x-4 sm:ml-6 sm:space-x-6">
                                 {/* Profile dropdown */}
                                 <div className="relative flex-shrink-0">
                                     <div>
-                                        <button onClick={()=> setDropDownOn(prevDropDownOn => !prevDropDownOn)} type="button" className="bg-light space-x-3 rounded-full flex text-sm" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                        <button onClick={()=> setDropDownOn(prevDropDownOn => !prevDropDownOn)} type="button" className="bg-transparent space-x-3 flex text-sm" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                                             <span className="sr-only">Open user menu</span>
                                             {/* Profile Image  */}
                                             <img className="h-8 w-8 rounded-lg" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="" />
-                                            <span className="flex p-1 items-center justify-center text-white">Losty</span>
+                                            <span className="hidden sm:flex p-1 items-center justify-center text-white">Losty</span>
                                         </button>
                                     </div>
                                     <div className={classNames(dropDownOn? "": "hidden","origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-lighter ring-1 ring-black ring-opacity-5 focus:outline-none")} role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
