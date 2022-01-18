@@ -28,15 +28,15 @@ const OnlineUsersList = [
 
 const OnlineUsers = () => {
     return (
-        <div className='bg-dark rounded-l-xl'>
-            <div className='border-b border-lighter py-5 px-6 text-white font-bold text-lg flex flex-grow space-x-4 items-center'>
+        <div className='bg-dark rounded-l-xl w-96 drop-shadow-xl h-full flex flex-col pb-6'>
+            <div className='border-b border-lighter py-5 px-6 text-white font-bold text-lg flex space-x-4 items-center'>
                 <img src="/svgs/online.svg" alt="online" />
                 <h1 className='grow'>Online Users</h1>
                 <h1 className='text-lighter'>3</h1>
             </div>
-            <ul role="list" className="divide-y divide-lighter">
+            <ul role="list" className="grow">
                 {OnlineUsersList.map((user) => (
-                    <li className="py-6 px-4">
+                    <li className="py-6 px-4 border-b border-lighter">
                         <div className="flex space-x-3">
                             <img className="h-12 w-12 rounded-xl" src={user.imgUrl} alt={user.name} />
                             <div className="flex-1 space-y-1">

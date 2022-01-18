@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
                     </main>
 
                     {/* Secondary column (hidden on smaller screens) */}
-                    <aside className="hidden w-96 drop-shadow-xl border-gray-200 overflow-y-auto lg:inline-block">
+                    <aside className="hidden border-gray-200 overflow-y-auto lg:inline-block">
                         <OnlineUsers />
                     </aside>
                 </div>

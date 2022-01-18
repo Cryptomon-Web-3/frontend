@@ -1,11 +1,10 @@
 import React from 'react'
-import Layout from '../../components/Layout/Layout'
-import OnlineUsers from '../../components/OnlineUsers/OnlineUsers'
+import Profile from '../../components/Profile/Profile'
 
 const Dashboard = () => {
     return (
         <div>
-            This is dashboard
+            <Profile/>
         </div>
     )
 }
