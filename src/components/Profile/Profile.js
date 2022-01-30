@@ -2,7 +2,7 @@ import React from 'react'
 
 const Profile = () => {
     return (
-        <div className="grid grid-cols-3 gap-8 px-20 py-8">
+        <div className="grid md:grid-cols-3 gap-8">
             <div className='flex items-center justify-center'>
                 <div className='rounded-full bg-gradient-to-t p-1 from-mypink to-myblue w-fit'>
                     <div className='bg-primary rounded-full p-2'>

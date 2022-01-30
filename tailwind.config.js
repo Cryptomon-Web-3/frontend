@@ -13,6 +13,9 @@ module.exports = {
         myblue: '#4D7BFD',
         mypink: '#D14EFF',                 
       },
+      fontSize: {
+        'tiny': '.75rem',
+      }
     },
   },
   plugins: [

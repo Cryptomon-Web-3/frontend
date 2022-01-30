@@ -35,8 +35,8 @@ const OnlineUsers = () => {
                 <h1 className='text-lighter'>3</h1>
             </div>
             <ul role="list" className="grow">
-                {OnlineUsersList.map((user) => (
-                    <li className="py-6 px-4 border-b border-lighter">
+                {OnlineUsersList.map((user, index) => (
+                    <li key={index} className="py-6 px-4 border-b border-lighter">
                         <div className="flex space-x-3">
                             <img className="h-12 w-12 rounded-xl" src={user.imgUrl} alt={user.name} />
                             <div className="flex-1 space-y-1">

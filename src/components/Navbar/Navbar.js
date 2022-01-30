@@ -117,10 +117,10 @@ const Navbar = ({children}) => {
                         {/* Navbar items  */}
                         <div className='px-4 '>
                             {
-                                Navigation.map((nav) => {
+                                Navigation.map((nav, index) => {
                                     if(location.pathname === nav.to){
                                         return(
-                                            <div className='text-white sm:text-4xl text-2xl flex items-center space-x-4'>
+                                            <div key={index} className='text-white sm:text-4xl text-2xl flex items-center space-x-4'>
                                                 <nav.icon className='sm:h-10 sm:w-10'/>
                                                 <h1 className='font-bold'>{nav.label}</h1>
                                             </div>
@@ -142,7 +142,7 @@ const Navbar = ({children}) => {
                                             <span className="hidden sm:flex p-1 items-center justify-center text-white">Losty</span>
                                         </button>
                                     </div>
-                                    <div className={classNames(dropDownOn? "": "hidden","origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-lighter ring-1 ring-black ring-opacity-5 focus:outline-none")} role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                                    <div className={classNames(dropDownOn? "": "hidden","origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-lighter ring-1 ring-black ring-opacity-5 focus:outline-none")} role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1">
                                         {ProfileDropDown.map((item, index)=> (
                                             <Link key={index} to={item.to} className={classNames(location.pathname == item.to? "bg-dark m-2 rounded-md text-white": "text-dark","block px-4 py-2 text-sm")}>
                                                 {item.label}
