@@ -17,7 +17,7 @@ const PokemonCard = ({ pokemonData }) => {
     <li className={classNames(`col-span-1 flex flex-col text-center rounded-3xl shadow divide-y divide-gray-200 lg:mx-8 min-w-fit`)} style={{ backgroundColor: pokemonData.bgColor }}>
       <div className="flex-1 flex flex-col px-8 py-3">
         <h3 className="text-xl font-bold text-left text-white drop-shadow-xl">{pokemonData.name}</h3>
-        <ul className="px-2 py-1 w-fit text-xs text-white  font-medium bg-white/50 rounded-full flex list-disc">
+        <ul className="px-2 py-1 w-fit text-xs text-white  font-medium bg-white/50 rounded-full flex list-disc drop-shadow-xl">
           {/* <img className='text-yellow-400' src="/svgs/ellipse.svg" alt="bullet" /> */}
           {pokemonData.type}
         </ul>
