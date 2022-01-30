@@ -1,10 +1,11 @@
 import React from 'react'
+import ChatBox from '../../components/ChatBox/ChatBox'
 
 const Chat = () => {
     return (
-        <div>
-            This is chat
-        </div>
+        <>
+            <ChatBox/>
+        </>
     )
 }
 

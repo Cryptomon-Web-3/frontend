@@ -35,6 +35,12 @@ body {
     border: 5px solid theme('colors.primary');
 }
 
+@media only screen and (max-width: 900px) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
 @supports (scrollbar-color: theme('colors.mypink')) {
     *{
         scrollbar-color: theme('colors.mypink') theme('colors.primary');
