@@ -28,11 +28,11 @@ const OnlineUsersList = [
 
 const OnlineUsers = () => {
     return (
-        <div className='bg-dark rounded-l-xl w-96 drop-shadow-xl h-full flex flex-col pb-6'>
+        <div className='bg-dark rounded-l-xl w-96 drop-shadow-xl h-full flex flex-col'>
             <div className='border-b border-lighter py-5 px-6 text-white font-bold text-lg flex space-x-4 items-center'>
                 <img src="/svgs/online.svg" alt="online" />
                 <h1 className='grow'>Online Users</h1>
-                <h1 className='text-lighter'>3</h1>
+                <h1 className='text-lighter'>{OnlineUsersList.length}</h1>
             </div>
             <ul role="list" className="grow">
                 {OnlineUsersList.map((user, index) => (
