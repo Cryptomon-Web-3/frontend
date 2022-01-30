@@ -1,9 +1,10 @@
 import React from 'react'
+import SignupLayout from '../../components/SignupLayout/SignupLayout'
 
 const Signup = () => {
     return (
         <div>
-            This is Signup page
+            <SignupLayout />
         </div>
     )
 }

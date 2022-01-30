@@ -26,6 +26,22 @@ const pokemons = [
         imageUrl: '/pokemons/pikachu.png',
         bgColor: '#fdcb6e',
     },
+    {
+        name: 'Pikachu',
+        type: 'electric',
+        abilities: ['Fireball', 'Fireblast', 'Quick Attack', 'Heat Blast', 'Cannon Bolt'],
+        skills: ['Fireball', 'Fireblast', 'Quick Attack', 'Heat Blast', 'Cannon Bolt'],
+        imageUrl: '/pokemons/pikachu.png',
+        bgColor: '#fdcb6e',
+    },
+    {
+        name: 'Pikachu',
+        type: 'electric',
+        abilities: ['Fireball', 'Fireblast', 'Quick Attack', 'Heat Blast', 'Cannon Bolt'],
+        skills: ['Fireball', 'Fireblast', 'Quick Attack', 'Heat Blast', 'Cannon Bolt'],
+        imageUrl: '/pokemons/pikachu.png',
+        bgColor: '#fdcb6e',
+    },
 ]
 
 const PokemonCardList = () => {

@@ -13,14 +13,14 @@ import Layout from "../components/Layout/Layout";
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Layout> <Dashboard /> </Layout>} /> 
-          <Route path="/chat" element={<Layout> <Chat/> </Layout>} />pages
-          <Route path="/login" element={<Login/>} />
-          <Route path="/signup" element={<Signup/>} />
-        </Routes>
-      </Router>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Layout> <Dashboard /> </Layout>} />
+            <Route path="/chat" element={<Layout> <Chat /> </Layout>} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </Router>
     </div>
   );
 }

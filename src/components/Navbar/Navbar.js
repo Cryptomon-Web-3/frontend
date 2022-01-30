@@ -115,7 +115,7 @@ const Navbar = ({children}) => {
                             <MenuAlt2Icon className="h-6 w-6" onClick={() => setHamMenuOn(true)}/>
                         </button>
                         {/* Navbar items  */}
-                        <div className='px-4 '>
+                        <div className='px-4 lg:ml-28'>
                             {
                                 Navigation.map((nav, index) => {
                                     if(location.pathname === nav.to){
